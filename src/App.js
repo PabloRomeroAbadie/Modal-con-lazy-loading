@@ -1,13 +1,18 @@
 import "./App.css"
-import openModal from "./components/openModal";
+import {openModal, openModalAccount} from "./components/openModal";
 
 function App() {
   function handleOpenModal(){
     openModal()
   }
+
+  function handleOpenModal2(){
+    openModalAccount()
+  }
   return (
     <div className="App">
       <button onClick={handleOpenModal}>Abrir modal</button>
+      <button onClick={handleOpenModal2}>Abrir modal</button>
     </div>
   );
 }
