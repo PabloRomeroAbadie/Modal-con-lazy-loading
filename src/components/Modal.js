@@ -1,10 +1,16 @@
 
-const Modal = ({children}) => {
+import {useRef} from "react";
+
+const Modal = ({children, title, root}) => {
+
+    const ref = useRef(null);
+
+
     return (
-        <div>   
+        <div ref={ref}>   
             <div>
                 <div>
-                    <div>Titulo</div>
+                    <div>{title}</div>
                     <div>
                         <button>x</button>
                     </div>
